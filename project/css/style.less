@@ -1,0 +1,223 @@
+* {
+	box-sizing: border-box;
+
+}
+html {
+	font-size: 10px;
+}
+body {
+	height: 670px;
+	background: url(../img/blue_pattern.png);
+	background-size: cover;
+	word-break:break-all;
+	font-family: 'Amatic SC', cursive;
+}
+.open {
+	display: block;
+	margin: 0 auto;
+	margin-top: 2rem;
+	height: 15rem;
+	width: 15rem;
+	text-align: center;
+	line-height: 12rem;
+	border-radius: 50%;
+	background: url(../img/green_pattern.png);
+	border: 2px solid #aeaeae;
+	transition: ease .4s;
+	&:hover {
+		box-shadow: 0 0 2rem yellow;
+		cursor: pointer;
+	}
+	&:hover .open-btn {
+		text-shadow: 0 0 1rem #aeaeae;
+		cursor: pointer;
+	}
+	&-btn {
+		border: none;
+		background-color: transparent;
+		color: #fff;
+		font-size: 3.2rem;
+		font-family: 'Amatic SC', cursive;
+		font-weight: 700;
+		transition: ease .4s;
+		outline: none;
+	}
+}
+
+.main {
+	width: 100%;
+	// margin-top: 1rem;
+	display: flex;
+	justify-content: space-around;
+	font-size: 3rem;
+	color: #E6C04F;
+	letter-spacing: 1.5px;
+	text-shadow: 0 0 5px rgba(255,255,255,.3);
+	font-weight: 700;
+	&-info {
+		width: 55rem;
+		min-height: 40rem;
+		padding: 2rem;
+		background-color: transparent;
+		& .name-value, .budget-value, .goods-value, .items-value, .employers-value {
+			border-bottom: 2px solid #E6C04F;
+		}
+		& td {
+			padding: .8rem 0;
+		}
+		.isopen-value {
+			width: 48%;
+			padding-top: 10px;
+			min-height: 40px;
+			text-align: center;
+		}
+		.discount-value {
+			width: 48%;
+			padding-top: 10px;
+			min-height: 40px;
+			text-align: center;
+		}
+		.switch-label {
+		  display:inline-block;
+		  width:60px;
+		  height:36px;
+		  background-color: #fff;
+		  border: 1px solid #aeaeae;
+		  box-shadow: inset -1px 1px 5px rgba(0,0,0,.5);
+		  transition: ease-in-out .2s;
+		  border-radius:50px;
+		  cursor: pointer;
+		  &::before {
+		    content: '';
+		    border: 1px solid #aeaeae;
+		    display: inline-block;
+		    box-shadow: 1px 1px 1px rgba(0,0,0,.5);
+		    height: 30px;
+		    width: 30px;
+		    margin-top: 1px;
+		    background-color: #fff;
+		    border-radius: 50%;
+		    transition: ease-in-out .2s;
+		    transform: translateX(-12px);
+		  }
+		  
+		}
+		.switch {
+		  transform: translateX(-5000px);
+		  &:checked + .switch-label{
+		    box-shadow: inset 30px 0 20px #32cd32;
+		    &::before {
+		      transform: translateX(13px);
+		      box-shadow: -1px 1px 1px rgba(0,0,0,.5);
+		    }
+		  }
+		}
+		.open-label {
+			box-shadow: inset -30px 0 20px #E42733;
+			cursor: not-allowed;
+		}
+	}
+	&-functions {
+		width: 550px;
+		min-height: 500px;
+		padding: 20px;
+		background-color: transparent;
+		& input[type=text] {
+			background-color: transparent;
+			border: 1px solid #E6C04F;
+			padding: 19px 8px;
+			font-family: 'Amatic SC', cursive;
+			font-size: 2.3rem;
+			color: #E6C04F;
+			outline: none;
+			letter-spacing: 1.2px;
+			border-radius: 10px;
+			transition: ease .3s;
+			&:hover {
+				box-shadow: 0 0 7px rgba(255,255,255,.5);
+			}
+			&:focus {
+				box-shadow: 0 0 7px #fff;
+			}
+		}
+		& button {
+			background-color: transparent;
+			font-family: 'Amatic SC', cursive;
+			color: lighten(#E6C04F, 20%);
+			font-size: 2rem;
+			border: 2px solid lighten(#E6C04F, 30%);
+			border-radius: 8px;
+			padding: 5px 10px;
+			cursor: pointer;
+			transition: ease .3s;
+			&:hover {
+				box-shadow: inset 0 0 10px #39EE4B;
+			}
+		}
+		.time {
+			display: block;
+			text-align: center;
+			&-value {
+				width: 4rem;
+				margin-top: 2rem;
+				padding: 5px 8px !important;
+				text-align: center;
+				display: inline-block;
+			}
+		}
+		.choose-goods, .choose-items, .count-budget, .hire-employers {
+			margin-top: 5px;
+			text-align: center;
+		}
+		.goods-item {
+			display: inline-block;
+			margin: 0 auto;
+			margin-top: 10px;
+			padding-left: 10px;
+			width: 49%;
+			height:25px;
+			&-btn {
+				display: block;
+				margin: 0 auto;
+				margin-top: 10px;
+			}
+		}	
+		.choose-item, .count-budget-value {
+			display: block;
+			margin: 0 auto;
+			margin-top: 10px;
+			padding-left: 10px;
+			width: 70%;
+			height:25px;
+		}
+		.count-budget-value {
+			width: 30%;
+			display: inline-block;
+			margin-left: 25%;
+		}
+		.hire-employers-item {
+			display: inline-block;
+			margin: 0 auto;
+			margin-top: 10px;
+			padding-left: 10px;
+			width: 49%;
+			height:25px;
+		}
+		.hire-employers-btn {
+			display: block;
+			margin: 0 auto;
+			margin-top: 10px;
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
