@@ -4,12 +4,12 @@
 	<meta charset="UTF-8">
 	<title>Выборы</title>
 	<link rel="stylesheet" href="css/style.css">
-	<script src="js/main.js
-	"></script>
+	<link rel="stylesheet" href="css/animate.css">
+	<script src="js/main.js"></script>
 </head>
 <body>
 	<!-- Main Page -->
-	<div class="main">
+	<div class="main animated">
 		<div class="main-cards">
 			<div class="main-cards-item main-cards-item-active">
 				<div class="candidate-block">
@@ -23,7 +23,7 @@
 				</div>
 				<div class="name">Иванов
 				Виктор Иванович</div>
-				<div class="age">38</div>
+				<div class="age">38 лет</div>
 				Пол:
 				<div class="sex">Мужской</div>
 				Полит. взгляды:
@@ -61,8 +61,8 @@
 	</div>
 
 	<!-- Popup -->
-	<div class="overlay">
-	 		<div class="popup">
+	<div class="overlay animated">
+	 		<div class="popup animated">
 				<div class="popup-title">не доволен прошедшими выборами?</div>
 				<div class="popup-subtitle">создай своего кандидата</div>
 				<button id="popup-btn" class="popup-btn">создать</button>
@@ -70,17 +70,17 @@
 	</div>
 
 	<!-- Customization -->
-	<div class="custom">
+	<div class="custom animated">
 		<div class="custom-info">
 			<label for="name">Фамилия Имя Отчество</label>
 			<input type="text" id="name">
 			<label for="age">Возраст, лет</label>
-			<input type="number" id="age" maxlength="3">
+			<input type="number" id="age" min="0" max="150">
 			<div class="radio">
 				<input value="Мужской" id="male" checked name="sex" type="radio">
-				<label for="sex">Мужчина</label>
-				<input value="Женский" id="female" name="sex" type="radio">
-				<label for="sex">Женщина</label>
+				<label for="male">Мужчина</label>
+				<input value="Женский" id="female"  name="sex" type="radio">
+				<label for="female">Женщина</label>
 			</div>
 			<select id="select">
 				<option value="Либеральные">Либеральные</option>
@@ -98,7 +98,7 @@
 				<div id="person-hair" class="person-hair"></div>
 				<div class="person-shoes"></div>
 			</div>
-			<div id="ready" class="btn">готово</div>
+			<div id="ready" class="not-available">готово</div>
 		</div>
 
 		<div class="custom-style">
@@ -126,9 +126,9 @@
 					<div class="hair-style hair-style-1"></div>
 					<div class="hair-style hair-style-2"></div>
 					<div class="hair-style hair-style-3"></div>
-					<div class="hair-style hair-style-4"></div>
-					<div class="hair-style hair-style-5"></div>
-					<div class="hair-style hair-style-6"></div>
+					<div class="hair-style-woman hair-style-woman-1"></div>
+					<div class="hair-style-woman hair-style-woman-2"></div>
+					<div class="hair-style-woman hair-style-woman-3"></div>
 				<div class="next">
 					<i class="flaticon-right-arrow"></i>
 				</div>
@@ -143,9 +143,9 @@
 					<div class="clothes-style clothes-style-1"></div>
 					<div class="clothes-style clothes-style-2"></div>
 					<div class="clothes-style clothes-style-3"></div>
-					<div class="clothes-style clothes-style-4"></div>
-					<div class="clothes-style clothes-style-5"></div>
-					<div class="clothes-style clothes-style-6"></div>
+					<div class="clothes-style-woman clothes-style-woman-1"></div>
+					<div class="clothes-style-woman clothes-style-woman-2"></div>
+					<div class="clothes-style-woman clothes-style-woman-3"></div>
 				<div class="next">
 					<i class="flaticon-right-arrow"></i>
 				</div>

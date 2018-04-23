@@ -62,23 +62,6 @@
     margin: 0
     outline: none
 
-@keyframes modal-up
-    from
-        transform: translate(-50%, 0)
-    to
-        transform: translate(-50%, -1000px)
-
-@keyframes fade
-    0%
-        opacity: 1
-    99%
-        opacity: .1
-    100%
-        display: none
-.fade_anim
-    animation: fade 1s
-.modal-up_anim
-    animation: modal-up 1s
 .main
     min-height: 670px
     padding-top: 10px
@@ -136,6 +119,9 @@
                         height: 195px
                         background: url(../img/clothes/construct/shoes.png) center no-repeat
                         background-size: cover
+                        &-woman
+                            background: url(../img/clothes/construct/shoes-woman.png) center no-repeat
+                            background-size: cover
                 .photo
                     width: 90px
                     height: 195px
@@ -148,11 +134,13 @@
                 .result
                     display: flex
                     flex-direction: column
-                    align-item: center
+                    align-items: center
                     justify-content: center
                     text-align: center
                     font-size: 18px
                     font-weight: bold
+                    &-count
+                        width: 50px
                     .progress
                         display: flex
                         margin: 0 auto
@@ -166,7 +154,7 @@
                             width: 10px
                             border-radius: 10px
                             background-color: rgba(31,140,226,1)
-                            transition: 1.5s
+                            transition: 1s
                             &-1
                                 height: 35%
                             &-2
@@ -411,6 +399,9 @@
                 height: 450px
                 background: url(../img/clothes/construct/shoes.png) center no-repeat
                 background-size: cover
+                &-woman
+                    background: url(../img/clothes/construct/shoes-woman.png) center no-repeat
+                    background-size: cover
         .btn
             display: block
             margin: 0 auto
@@ -478,6 +469,7 @@
                     background-color: #a5673f
         .hair-style
             &-1
+                display: none
                 width: 160px
                 height: 80px
                 background: #f2f2f2 url(../img/hair/slide/hair-1.png) center no-repeat
@@ -497,21 +489,21 @@
                 background: #f2f2f2 url(../img/hair/slide/hair-3.png) center no-repeat
                 background-size: 40%
                 border-radius: 10px
-            &-4
+            &-woman-1
                 display: none
                 width: 160px
                 height: 80px
                 background: #f2f2f2 url(../img/hair/slide/hair-4.png) center no-repeat
                 background-size: 40%
                 border-radius: 10px
-            &-5
+            &-woman-2
                 display: none
                 width: 160px
                 height: 80px
                 background: #f2f2f2 url(../img/hair/slide/hair-5.png) center no-repeat
                 background-size: 40%
                 border-radius: 10px
-            &-6
+            &-woman-3
                 display: none
                 width: 160px
                 height: 80px
@@ -521,6 +513,7 @@
 
         .clothes-style
             &-1
+                display: none
                 width: 160px
                 height: 80px
                 background: #aeaeae url(../img/clothes/slide/clothes-1.png) center no-repeat
@@ -540,25 +533,51 @@
                 background: #aeaeae url(../img/clothes/slide/clothes-3.png) center no-repeat
                 background-size: 20%
                 border-radius: 10px
-            &-4
+            &-woman-1
                 display: none
                 width: 160px
                 height: 80px
                 background: #aeaeae url(../img/clothes/slide/clothes-4.png) center no-repeat
                 background-size: 20%
                 border-radius: 10px
-            &-5
+            &-woman-2
                 display: none
                 width: 160px
                 height: 80px
                 background: #aeaeae url(../img/clothes/slide/clothes-5.png) center no-repeat
                 background-size: 20%
                 border-radius: 10px
-            &-6
+            &-woman-3
                 display: none
                 width: 160px
                 height: 80px
                 background: #aeaeae url(../img/clothes/slide/clothes-6.png) center no-repeat
                 background-size: 20%
                 border-radius: 10px
+.not-available
+    display: block
+    margin: 0 auto
+    margin-top: 40px
+    width: 270px
+    height: 60px
+    line-height: 60px
+    border-radius: 30px
+    border: none
+    color: #fff
+    outline: none
+    font-size: 13px
+    font-weight: 500
+    text-transform: uppercase
+    text-align: center
+    cursor: pointer
+    background-color: rgba(0,0,0,.4)
+    background-image: none
+    pointer-events: none
+
+
+
+
+
+
+
 

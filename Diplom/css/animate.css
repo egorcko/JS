@@ -9,7 +9,7 @@
  */
 
 .animated {
-  animation-duration: 2s;
+  animation-duration: 1s;
   animation-fill-mode: both;
 }
 
@@ -699,12 +699,16 @@
 }
 
 @keyframes fadeOut {
-  from {
+  0% {
     opacity: 1;
+    display: block;
   }
 
-  to {
+  99% {
     opacity: 0;
+  }
+  100% {
+    display: none;
   }
 }
 
@@ -1565,12 +1569,12 @@
 
 @keyframes slideOutUp {
   from {
-    transform: translate3d(0, 0, 0);
+    transform: translate3d(-50%, 0, 0);
   }
 
   to {
     visibility: hidden;
-    transform: translate3d(0, -100%, 0);
+    transform: translate3d(-50%, -100%, 0);
   }
 }
 

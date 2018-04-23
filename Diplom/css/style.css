@@ -64,59 +64,6 @@
   outline: none;
 }
 
-@-webkit-keyframes modal-up {
-  from {
-    -webkit-transform: translate(-50%, 0);
-            transform: translate(-50%, 0);
-  }
-  to {
-    -webkit-transform: translate(-50%, -1000px);
-            transform: translate(-50%, -1000px);
-  }
-}
-
-@keyframes modal-up {
-  from {
-    -webkit-transform: translate(-50%, 0);
-            transform: translate(-50%, 0);
-  }
-  to {
-    -webkit-transform: translate(-50%, -1000px);
-            transform: translate(-50%, -1000px);
-  }
-}
-@-webkit-keyframes fade {
-  0% {
-    opacity: 1;
-  }
-  99% {
-    opacity: 0.1;
-  }
-  100% {
-    display: none;
-  }
-}
-@keyframes fade {
-  0% {
-    opacity: 1;
-  }
-  99% {
-    opacity: 0.1;
-  }
-  100% {
-    display: none;
-  }
-}
-.fade_anim {
-  -webkit-animation: fade 1s;
-          animation: fade 1s;
-}
-
-.modal-up_anim {
-  -webkit-animation: modal-up 1s;
-          animation: modal-up 1s;
-}
-
 .main {
   min-height: 670px;
   padding-top: 10px;
@@ -196,6 +143,10 @@
   background: url(../img/clothes/construct/shoes.png) center no-repeat;
   background-size: cover;
 }
+.main-cards-item .candidate-block .person-shoes-woman {
+  background: url(../img/clothes/construct/shoes-woman.png) center no-repeat;
+  background-size: cover;
+}
 .main-cards-item .candidate-block .photo {
   width: 90px;
   height: 195px;
@@ -216,13 +167,18 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  align-item: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   text-align: center;
   font-size: 18px;
   font-weight: bold;
+}
+.main-cards-item .candidate-block .result-count {
+  width: 50px;
 }
 .main-cards-item .candidate-block .result .progress {
   display: -webkit-box;
@@ -241,8 +197,8 @@
   width: 10px;
   border-radius: 10px;
   background-color: #1f8ce2;
-  -webkit-transition: 1.5s;
-  transition: 1.5s;
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 .main-cards-item .candidate-block .result .progress-bar-1 {
   height: 35%;
@@ -539,6 +495,10 @@
   background: url(../img/clothes/construct/shoes.png) center no-repeat;
   background-size: cover;
 }
+.custom-char .person-shoes-woman {
+  background: url(../img/clothes/construct/shoes-woman.png) center no-repeat;
+  background-size: cover;
+}
 .custom-char .btn {
   display: block;
   margin: 0 auto;
@@ -621,6 +581,7 @@
   background-color: #a5673f;
 }
 .custom-style .hair-style-1 {
+  display: none;
   width: 160px;
   height: 80px;
   background: #f2f2f2 url(../img/hair/slide/hair-1.png) center no-repeat;
@@ -643,7 +604,7 @@
   background-size: 40%;
   border-radius: 10px;
 }
-.custom-style .hair-style-4 {
+.custom-style .hair-style-woman-1 {
   display: none;
   width: 160px;
   height: 80px;
@@ -651,7 +612,7 @@
   background-size: 40%;
   border-radius: 10px;
 }
-.custom-style .hair-style-5 {
+.custom-style .hair-style-woman-2 {
   display: none;
   width: 160px;
   height: 80px;
@@ -659,7 +620,7 @@
   background-size: 40%;
   border-radius: 10px;
 }
-.custom-style .hair-style-6 {
+.custom-style .hair-style-woman-3 {
   display: none;
   width: 160px;
   height: 80px;
@@ -668,6 +629,7 @@
   border-radius: 10px;
 }
 .custom-style .clothes-style-1 {
+  display: none;
   width: 160px;
   height: 80px;
   background: #aeaeae url(../img/clothes/slide/clothes-1.png) center no-repeat;
@@ -690,7 +652,7 @@
   background-size: 20%;
   border-radius: 10px;
 }
-.custom-style .clothes-style-4 {
+.custom-style .clothes-style-woman-1 {
   display: none;
   width: 160px;
   height: 80px;
@@ -698,7 +660,7 @@
   background-size: 20%;
   border-radius: 10px;
 }
-.custom-style .clothes-style-5 {
+.custom-style .clothes-style-woman-2 {
   display: none;
   width: 160px;
   height: 80px;
@@ -706,11 +668,32 @@
   background-size: 20%;
   border-radius: 10px;
 }
-.custom-style .clothes-style-6 {
+.custom-style .clothes-style-woman-3 {
   display: none;
   width: 160px;
   height: 80px;
   background: #aeaeae url(../img/clothes/slide/clothes-6.png) center no-repeat;
   background-size: 20%;
   border-radius: 10px;
+}
+
+.not-available {
+  display: block;
+  margin: 0 auto;
+  margin-top: 40px;
+  width: 270px;
+  height: 60px;
+  line-height: 60px;
+  border-radius: 30px;
+  border: none;
+  color: #fff;
+  outline: none;
+  font-size: 13px;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-align: center;
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.4);
+  background-image: none;
+  pointer-events: none;
 }
